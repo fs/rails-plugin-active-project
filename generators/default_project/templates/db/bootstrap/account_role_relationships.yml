@@ -1,0 +1,5 @@
+# account "user2" have "admin" role
+account_role_relationships:
+  id: 1
+  account_id: 2
+  account_role_id: 1

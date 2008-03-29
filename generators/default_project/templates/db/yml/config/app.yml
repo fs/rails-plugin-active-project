@@ -1,0 +1,12 @@
+defaults: &defaults
+  host: tsweb.toa:3000  
+  app_name: <%= app_name.humanize %>
+
+development:
+  <<: *defaults
+
+test: 
+  <<: *defaults
+
+production: 
+  <<: *defaults

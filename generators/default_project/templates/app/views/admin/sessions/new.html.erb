@@ -1,0 +1,25 @@
+<div class="login">
+    <% form_tag admin_session_path do %>
+        <table cellspacing="7" width="100%">
+          <tr>
+            <td width="50"><label for="login">Login:</label></td>
+            <td width="100%"><%= text_field_tag 'login', nil, :class => 'box-input' %></td>
+          </tr>
+          <tr>
+            <td><label for="password">Password:</label></td>
+            <td><%= password_field_tag 'password', nil, :class => 'box-input' %></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+                <%= check_box_tag 'remember_me', 1, true %>
+                <label for="remember_me">Remember me on this computer</label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><%= submit_tag 'login', :class => 'login-button' %></td>
+          </tr>
+        </table>        
+    <% end %>
+</div>

@@ -1,0 +1,3 @@
+<%= link_to 'Previous page', { :page => list_table_pagination.current.previous } if list_table_pagination.current.previous %>
+<%= pagination_links list_table_pagination %>
+<%= link_to 'Next page', { :page => list_table_pagination.current.next } if list_table_pagination.current.next %>

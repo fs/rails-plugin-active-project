@@ -1,0 +1,12 @@
+<div class="cleaner"></div>
+<% if flash[:error].nil? -%>
+	<div class="message-error" id="dynamic-errors" style="display:none">System</div>
+<% else -%>									
+	<div class="message-error" id="dynamic-errors"><%= flash[:error] -%></div>
+<% end -%>
+
+<% if flash[:notice].nil? -%>
+	<div class="message-success" id="dynamic-success" style="display:none">Action has been successfully performed</div>
+<% else -%>									
+	<div class="message-success" id="dynamic-success"><%= flash[:notice] -%></div>
+<% end -%>

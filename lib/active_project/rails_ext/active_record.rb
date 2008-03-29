@@ -1,0 +1,1 @@
+Dir[File.dirname(__FILE__) + "/active_record/*.rb"].each { |file| require(file) }

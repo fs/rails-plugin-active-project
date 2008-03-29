@@ -1,0 +1,5 @@
+index:
+  title: Home
+  url: /admin
+  roles: true
+  order: 1

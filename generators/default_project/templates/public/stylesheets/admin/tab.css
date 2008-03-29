@@ -1,0 +1,36 @@
+ul.subsection_tabs {
+    border-bottom:1px solid #CCCCCC;
+    clear:both;
+    height:20px;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0pt;
+    padding:0pt;
+}
+ul.subsection_tabs li {
+    float:left;
+    margin-right:7px;
+    text-align:center;
+}
+ul.subsection_tabs li a {
+    background-color:#FFFFFF;
+    color:#666666;
+    display:block;
+    height:20px;
+    padding:0pt 6px;
+    width:80px;
+}
+ul.subsection_tabs li a:hover {
+    color:#666666;
+}
+ul.subsection_tabs li a.active {
+    background-color:#DDDDDD;
+}
+ul.register_tabs {
+    border-bottom:medium none;
+}
+ul.register_tabs li a.active {
+    background-color:#6D7A81;
+    color:#FFFFFF;
+}

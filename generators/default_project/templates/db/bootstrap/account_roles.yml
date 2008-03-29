@@ -1,0 +1,9 @@
+<% [
+     %Q( admin )
+   ].flatten.each_with_index do |role, i|
+%>
+
+account_role_<%= role.gsub('.', '_') %>: 
+  id: <%= i %>
+  title: <%= role %>    
+<% end %>

@@ -1,0 +1,1 @@
+Dir[File.dirname(__FILE__) + "/hash/*.rb"].each { |file| require(file) }

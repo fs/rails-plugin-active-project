@@ -1,0 +1,358 @@
+#header {
+    padding:0;
+    margin:0;
+    
+    float:left;
+    width:100%;
+    
+    font-size: 11px;
+    
+    background: #333333;
+    border-bottom: 1px solid #333333;
+}
+
+#header a {
+    text-decoration:none;
+}
+
+#header a:hover {
+    text-decoration:underline;
+}
+
+#content {
+    width: 85%;
+    margin: 10px 10px 0 15px;
+    padding: 3px 15px;
+    
+    font-size:100%;
+}
+
+#main ul li {
+    list-style: url("../../images/admin/bull.gif");
+    margin: 0px;
+    padding: 0 0 15px 0px;
+    font-size: 90%;
+    line-height:150%;
+}
+
+a.important-link {
+    color: orange !important;
+}
+
+.required {
+    color: red;
+}
+
+.required-area {
+    font-weight: normal;
+    font-size: 80%;
+    padding: 2px 1px 1px 1px;
+}
+
+.message-error {
+    background: #fff;
+    color: red;
+    font-size: 90%;
+ 
+    padding: 4px 5px 4px 5px;
+    margin: 0;
+    line-height: 1.7em;
+}
+
+.message-success{
+    background: #BFE894;
+    background: url(../../images/admin/success-bg.gif);
+    color: #3F5A3F;
+    
+    padding: 4px 5px 4px 5px;
+    margin: 0 0 20px 0;
+    
+    border: 1px solid #96d168;
+}
+
+
+.info-exit {
+    text-align: right;
+    padding: 10px 10px 0 0;
+    color: #fff;
+}               	
+
+.info-exit a, .info-exit a:link{
+    margin: 0 5px 0 5px;
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+
+.info-exit a:hover {
+    border-bottom: 1px solid #fff;
+    text-decoration:none !important;
+    color: #fff;
+}
+
+.cp-heading {
+    margin-left:30px;
+    padding:0 0 10px 0;
+    width: 40%;
+    
+    font-family: Trebuchet MS;
+    color: #fff;
+}
+
+.cp-heading a {
+    font-size: 250%;
+    color: #fff;
+    text-decoration: underline !important;
+}
+
+.cp-heading a:hover{
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float:right;
+}
+
+.admin-pagination {
+    font-size: 80%;
+    font-family: Arial;
+    font-weight: bold;
+    
+    margin: 10px 0;
+}
+
+.admin-pagination a {
+    text-decoration: none !important;
+    font-weight: normal;	
+    
+    border: 1px dotted #003366;
+    padding: 0px 6px;	
+    background: #fff;
+}
+
+.admin-pagination a:hover {
+    color: #fff;
+    background: #5E83A9;
+    border: 1px dotted gray;
+}
+
+ul#faq-list, ul#subject-faq-list, ul#tags_list {
+    margin: 0;
+    padding: 10px;
+    border: 1px dotted silver;
+}
+
+ul#faq-list li, ul#subject-faq-list li, ul#tags_list li {
+    font-size: 12px;
+    list-style: none;
+    border-left: 3px solid silver;
+    background: #f7f7f7;
+    padding: 5px 7px;
+    margin: 0 0 7px 0;
+    cursor: row-resize;
+}
+
+
+#list-info {
+    font-family: Georgia;
+    font-size: 120%;
+    color: green;
+    padding: 4px 5px 4px 5px;
+    margin: 0 0 20px 0;
+}
+
+.list-pagination {	
+    margin: 10px 0;
+    
+    font-size: 13px;
+    text-align: center;
+}
+
+.list-pagination a {
+    text-decoration: none !important;
+    
+    border: 1px solid #ddd;
+    padding: 0px 5px;	
+}
+
+.list-pagination a:hover {
+    border: 1px dotted gray;
+}
+
+a.clear-a {
+    display: inline !important;
+}
+
+.filter{
+    margin: 0;
+    padding: 5px;
+    
+    width: 98.7%;
+    
+    background: #E9F0FE url(../../images/user/header_gradient.gif) top left repeat-x;
+    
+    border: 1px solid #99CCFF;
+}
+
+.filter span {
+    font-size: 15px;
+    font-family: Georgia;
+    
+}
+
+.filter li{
+    white-space: nowrap;
+    list-style: none;
+    padding: 3px 7px;
+    display: inline;
+}
+
+.filter a{
+    padding: 1px 5px 1px 10px;
+    text-decoration: none;
+    width:90%;
+    
+    font-size: 75% !important;
+    font-family:arial;
+    
+    background: url(../../images/user/black_bullet.gif) no-repeat;
+    background-position: 0% -10%;
+}
+
+.filter h4{
+    background: #f6f6fe;
+    border-bottom: solid 1px #ddd;
+    
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.filter a:hover {
+    text-decoration: underline;
+}
+
+.blocks ul {
+    margin: 0 0 30px 0;
+    padding: 0;
+    
+    width: 100%;
+    
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    -moz-border-radius: 5px 1px 9px 9px;
+}
+
+.blocks ul li {
+    font-size: 70%;
+    font-family: Trebuchet MS;
+    list-style-type: none;
+    padding: 5px 5px 5px 30px;
+    border-bottom: 1px dotted #fff;
+}
+
+.blocks ul li:hover{
+    background: #fff;
+    border-bottom: 1px dotted #ccc;
+    -moz-border-radius: 0px 0px 9px 9px;
+}
+
+.blocks ul li a {
+}
+
+.blocks ul li .fl {
+    font-size: 13px;
+}
+
+.blocks ul h5 {
+    -moz-border-radius: 5px 0px 9px 9px;
+    border-bottom: 1px solid #ddd;
+    
+    background: #f2f2f2 url(../../images/user/down-yellow.gif) no-repeat;
+    background-position: 1% 50%;
+    
+    margin: 0;
+    padding: 5px 0 5px 30px;
+    
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+/* ====================================== show page container */
+
+.show-container {
+    
+    padding: 20px 30px 30px 30px;
+    border: 1px solid #e7e7e7;
+    
+    background: #F9F9F9;
+}
+
+/* ====================================== end of show page container */
+
+
+
+
+
+
+
+/* ====================================== show data table */
+
+table.show-data {
+    background: #fff;
+    width: 100%;
+    
+    border: 10px solid #f1f1f1;
+}
+
+    table.show-data thead th {
+        border-bottom: 8px solid #f1f1f1;
+        padding: 4px 10px;    
+    }
+        table.show-data th.date     { width: 70px; }
+        table.show-data th.tools    { width: 100px; }
+        table.show-data th.main     { width: 90%; }
+        
+    table.show-data tr.row1 {
+        background: #f7f7f7;
+    }
+
+    table.show-data tr.row2 {
+        background: #fff;
+    }
+
+        table.show-data tr:hover { background: #ffffdd; }
+        
+    table.show-data td {
+        padding: 4px 10px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    
+        table.show-data td a{
+            display: block;
+            padding: 3px 5px;
+            margin: 3px 0;
+            color: #666;
+            text-decoration: none;
+            background: #f1f1f1;
+            font-size: 90%;
+            text-align: center;
+            /*	border-bottom: 1px dotted #e7e7e7;		*/
+        }
+        
+            table.show-data tbody td a:hover {
+                background: #7ED73C;
+                color: #fff !important;
+                text-decoration: none !important;
+            }
+
+        table.show-data td.param {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+/* ====================================== end of show data table */
