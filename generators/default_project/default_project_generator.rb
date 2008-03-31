@@ -33,6 +33,14 @@ class Rails::Generator::Commands::Destroy
 end
 
 class DefaultProjectGenerator < Rails::Generator::Base
+    
+    private 
+    
+    def next_migration_string_with_inc(inc = 1)
+        (Time.now.utc.strftime("%Y%m%d%H%M%S").to_i + inc).to_s
+    end
+    
+    public    
 
 	def initialize(runtime_args, runtime_options = {})
 		super
@@ -146,8 +154,8 @@ class DefaultProjectGenerator < Rails::Generator::Base
 			## end libs
             
             ## migrates
-            %w(create_accounts create_account_roles create_account_role_relationships).each do |f|
-                m.migration_template "db/migrate/#{f}.rb", "db/migrate", :migration_file_name => f
+            %w(create_accounts create_account_roles create_account_role_relationships).each_with_index do |f, i|
+                m.file "db/migrate/#{f}.rb", "db/migrate/#{next_migration_string_with_inc(i)}_#{f}.rb"
 			end            
             %w(account_role_relationships account_roles accounts).each do |f|
                 m.file "db/bootstrap/#{f}.yml", "db/bootstrap/#{f}.yml"
