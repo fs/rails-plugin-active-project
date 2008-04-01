@@ -1,0 +1,11 @@
+<%% @page_title = 'Editing &quot;<%= singular_name.humanize %>&quot;' %> 
+
+<h1><%%= @page_title %></h1>
+
+<%% form_for([:<%= admin_namespace_path %>, @<%= singular_name %>]) do |f| %>
+    <%%= render :partial => 'form', :locals => { :f => f } %>
+
+    <div class="buttons-area">
+        <%%= submit_tag "Update" %> или <%%= link_to('Cancel', <%= admin_namespace_path %>_<%= plural_name %>_path, :class => "cancel-link") %>
+    </div>
+<%% end %>

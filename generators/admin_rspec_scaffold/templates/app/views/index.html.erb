@@ -1,0 +1,37 @@
+<%% @page_title = 'Listing &quot;<%= plural_name.humanize %>&quot;' %>
+
+<%%= list_table_title %>
+
+<%% unless @<%= plural_name %>.blank? %>
+
+<table cellpadding="0" cellspacing="0" border="0" class="show-data">
+    <thead>
+        <tr>
+            <% for attribute in attributes %>
+            <th><%= attribute.column.human_name %></th>
+            <% end %>
+            <th class="tools">Tools</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <%% for <%= singular_name %> in @<%= plural_name %> %>
+        <tr class="row<%%= cycle(1, 2) %>">
+            <% for attribute in attributes %>
+            <td><%%=h <%= singular_name %>.<%= attribute.name %> %></td>
+            <% end %>
+
+            <td>
+                <div><%%= link_to 'Edit', edit_<%= admin_namespace_path %>_<%= singular_name %>_path(<%= singular_name %>) %></div>
+                <div><%%= link_to 'Delete', [:<%= admin_namespace_path.to_sym %>, <%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class =>'delete-link' %></div>
+            </td>
+        </tr>
+    <%% end %>
+    </tbody>
+</table>
+
+<%% else %>
+
+    <h3>So far no <%= plural_name.humanize %> were created. <%%= link_to 'Create new?', :action => :new %></h3>
+    
+<%% end %>

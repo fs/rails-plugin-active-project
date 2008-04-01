@@ -41,12 +41,22 @@ a.important-link {
 
 .required {
     color: red;
+    font-size: 150%;
+    padding: 0 3px 0 0;
 }
 
 .required-area {
-    font-weight: normal;
-    font-size: 80%;
-    padding: 2px 1px 1px 1px;
+    font-size: 85%;
+}
+
+.field-tip { 
+    font-size: 90%; 
+    font-style: italic;
+
+    color: #555;
+    
+    background: #fff;
+    padding: 2px 2px 1px 2px;
 }
 
 .message-error {

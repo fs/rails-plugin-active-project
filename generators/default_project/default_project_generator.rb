@@ -110,7 +110,7 @@ class DefaultProjectGenerator < Rails::Generator::Base
 
 			
 			## helpers
-			%w(base index menu list_table sessions).each do |f|
+			%w(base index sessions).each do |f|
 				m.file "app/helpers/admin/#{f}_helper.rb", "app/helpers/admin/#{f}_helper.rb"
 			end
 			## end helpers

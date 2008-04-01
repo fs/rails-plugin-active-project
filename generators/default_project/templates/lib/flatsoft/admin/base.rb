@@ -9,7 +9,9 @@ module Flatsoft
                 base.change_error_field_proc
                 
                 # add usefull helpers
-                base.helper 'admin/menu', 'admin/list_table'
+                base.helper ActiveProject::RailsExt::ActionPack::Helpers::Admin::Tab
+                base.helper ActiveProject::RailsExt::ActionPack::Helpers::Admin::Menu
+                base.helper ActiveProject::RailsExt::ActionPack::Helpers::Admin::ListTable
             end
         end
     end

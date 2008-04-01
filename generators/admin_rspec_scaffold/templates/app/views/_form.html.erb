@@ -1,0 +1,19 @@
+<%%= f.error_messages %>
+
+<%% tabs(:<%= plural_name %>) do |tab| %>        
+    <%% tab.primary do %>
+        
+      <% for attribute in attributes %>
+      <div>
+          <label for="<%= attribute.name %>_title"><%= attribute.name.humanize %> <span class="required">*</span>:</label><br />
+          <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+          <div class="field-tip"><%= attribute.name.humanize %> tip</div>
+      </div>
+      <% end %>
+
+      <div class="required-area">
+          <span class="required">*</span> - required fields
+      </div>
+        
+    <%% end %>
+<%% end %>
