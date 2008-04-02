@@ -5,9 +5,13 @@
         
       <% for attribute in attributes %>
       <div>
-          <label for="<%= attribute.name %>_title"><%= attribute.name.humanize %> <span class="required">*</span>:</label><br />
+          <label for="<%= attribute.name %>"><%= attribute.column.human_name %> <span class="required">*</span>:</label><br />
+          <% if attribute.field_type == :text_filed %>        
+          <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :size => <%= attribute.column.inspect || 255 %> %>
+          <% else %>
           <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
-          <div class="field-tip"><%= attribute.name.humanize %> tip</div>
+          <% end %>
+          <div class="field-tip"><%= attribute.column.human_name %> tip</div>
       </div>
       <% end %>
 

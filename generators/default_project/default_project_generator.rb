@@ -75,6 +75,7 @@ class DefaultProjectGenerator < Rails::Generator::Base
 				db/yml/menu
                 db/yml/config
 				public/images/admin
+                public/images/textile_editor            
 				public/stylesheets/admin
 			).each do |d|
 				m.directory d
@@ -170,17 +171,23 @@ class DefaultProjectGenerator < Rails::Generator::Base
 			%w(sort_asc.gif sort_desc.gif).each do |f|
 				m.file "public/images/#{f}", "public/images/#{f}"
 			end
+			%w(background bold h1 h3 h5 indent justify list_bullets omega paragraph strikethrough blockquote center h2 h4 h6 italic left list_numbers outdent right underline).each do |f|
+				m.file "public/images/textile_editor/#{f}.png", "public/images/textile_editor/#{f}.png"
+			end
 			## end public images
 			
 			
 			## public javascript
-			%w(control_tabs).each do |f|
+			%w(control_tabs textile_editor textile_editor_config).each do |f|
 				m.file "public/javascripts/#{f}.js", "public/javascripts/#{f}.js"
 			end
 			## end javascript
 
 
-			## public stylesheets
+			## public stylesheets            
+			%w(textile_editor).each do |f|
+				m.file "public/stylesheets/#{f}.css", "public/stylesheets/#{f}.css"
+			end
 			%w(grid  login  menu  mixed  reset  tab  typography).each do |f|
 				m.file "public/stylesheets/admin/#{f}.css", "public/stylesheets/admin/#{f}.css"
 			end

@@ -51,14 +51,12 @@ module ActiveProject #:nodoc:
                             end
         
                             def puts_js
-                                @context.content_for :head do
-                                    @context.javascript_tag do
-                                        <<-JS
-                                        Event.observe(window, 'load', function() {
-                                            new Control.Tabs('#{@tab_id}');
-                                        });
-                                        JS
-                                    end
+                                @context.content_for :head_javascript do
+                                    <<-JS
+                                    Event.observe(window, 'load', function() {
+                                        new Control.Tabs('#{@tab_id}');
+                                    });
+                                    JS
                                 end
                             end
         

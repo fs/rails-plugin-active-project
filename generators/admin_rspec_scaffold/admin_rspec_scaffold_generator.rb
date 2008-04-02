@@ -1,3 +1,19 @@
+module Rails
+    module Generator
+        class GeneratedAttribute
+            
+            def field_type_with_textile_text_area
+                @field_type ||= case type
+                when :text  then :textile_text_area
+                else
+                    field_type_without_textile_text_area
+                end
+            end
+            alias_method_chain :field_type, :textile_text_area
+        end
+    end
+end
+
 class AdminRspecScaffoldGenerator < Rails::Generator::NamedBase
     default_options :skip_migration => false
   
@@ -121,35 +137,5 @@ class AdminRspecScaffoldGenerator < Rails::Generator::NamedBase
 
     def scaffold_views
         %w[ index new edit _form]
-    end
-end
-
-
-module Rails
-    module Generator
-        class GeneratedAttribute
-            def default_value
-                @default_value ||= case type
-                when :int, :integer               then "\"1\""
-                when :float                       then "\"1.5\""
-                when :decimal                     then "\"9.99\""
-                when :datetime, :timestamp, :time then "Time.now"
-                when :date                        then "Date.today"
-                when :string                      then "\"MyString\""
-                when :text                        then "\"MyText\""
-                when :boolean                     then "false"
-                else
-                    ""
-                end
-            end
-            
-            def input_type
-                @input_type ||= case type
-                when :text                        then "textarea"
-                else
-                    "input"
-                end
-            end
-        end
     end
 end

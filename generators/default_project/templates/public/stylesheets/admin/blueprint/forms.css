@@ -1,0 +1,107 @@
+/* -------------------------------------------------------------- 
+   
+   forms.css
+   * Sets up some default styling for forms
+   * Gives you classes to enhance your forms
+   
+   Usage:
+   * For text fields, use class .title or .text
+   
+
+/* Form fields
+-------------------------------------------------------------- */
+
+label       { font-weight: bold; }
+legend      { font-weight: bold; font-size:1.2em; }
+textarea    { width: 880px; height: 200px; }
+    textarea.brief  { width: 880px; height: 100px; }
+
+
+input.clean { width: auto; }
+
+fieldset {
+    border: 10px solid #f1f1f1;
+    padding: 15px; 
+}
+
+    fieldset div {
+        margin: 0 0 15px 0;
+    }
+    
+    fieldset input.box-input {
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid silver;
+        border-bottom: 1px solid silver;
+
+        font-size: 14px;
+
+        height: 1.4em;
+        width: 880px;
+
+        padding: 4px 4px 0 4px;
+    }
+    
+	fieldset input, fieldset textarea, input.box-input {
+	    border-top: 1px solid #000;
+	    border-left: 1px solid #000;
+	    border-right: 1px solid silver;
+	    border-bottom: 1px solid silver;
+	    
+	    width: 880px;
+	    padding: 4px;
+	}
+	
+	fieldset input:focus, fieldset textarea:focus, fieldset select:focus { background: #ffffdd; }
+    fieldset select { width: 300px; }
+
+
+.buttons-area { 
+    margin: 7px 0 0 0;
+    padding: 10px; 
+    background: #E8FFD7; 
+    border-top: 1px solid #C4F0A5; 
+}
+
+.errorExplanation { width: 835px; }
+
+.field-with-errors { display: inline; }
+    .field-with-errors input, .field-with-errors textarea, .field-with-errors input.box-input {
+        border: 1px solid #FF4F00; 
+    }
+
+.field-error {
+    text-align: right;
+    float: right;
+    color: #FF4F00;
+    margin: -27px 0px 0 0;
+    padding: 2px 5px 3px 5px;
+    background: #fff;
+    border: 3px solid #f1f1f1;
+}
+
+.field-tip { 
+    font-style: italic;
+    color: #555;   
+    background: #fff;
+    padding: 2px 2px 1px 2px;
+}
+
+.required { color: red; font-size: 150%; padding: 0 3px 0 0; line-height: 10px; font-weight: normal; }
+.required-area { font-size: 85%; }
+
+
+
+/* Success, notice and error boxes
+-------------------------------------------------------------- */
+
+.error,
+.notice, 
+.message-success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error      		{ background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice     		{ background: #FFF6BF; color: #514721; border-color: #FFD324; }
+.message-success    { background: #E8FFD7; color: #264409; border-color: #C4F0A5; }
+.error a    		{ color: #8a1f11; }
+.notice a   		{ color: #514721; }
+.success a  		{ color: #264409; }

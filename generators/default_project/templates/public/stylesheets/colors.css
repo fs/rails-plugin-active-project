@@ -1,0 +1,257 @@
+/*
+** Если в браузере включена загрузка изображений, то в качестве подложек к
+** рубрикам используются картинки, а не фоновый цвет.
+*/
+
+/*
+.bar
+{
+	background: url('../../images/shared/bkg-bar.gif');
+}
+
+
+.rubric h1 a,
+#comments h1,
+#expertColumn h1,
+#theme .service
+{
+	background: url('../../images/shared/bkg-red.gif');
+}
+
+#news h1,
+#contest h1
+{
+	background: url('../../images/shared/bkg-blue.gif');
+}
+
+#sections h1,
+#olds h1,
+#photoColumn h1,
+#photoReaders h1
+{
+	background: url('../../images/shared/bkg-gray.gif');
+}
+
+#blogs h1,
+#peopleNews h1
+{
+	background: url('../../images/shared/bkg-green.gif');
+}
+
+#anecdotes h1
+{
+	background: url('../../images/shared/bkg-brown.gif');
+}
+
+#podcasts h1,
+#authorRubrics h1
+{
+	background: url('../../images/shared/bkg-black.gif');
+}
+
+*/
+
+/*
+** Цвета.
+*/
+
+
+/* Чёрный на белом */
+.photo,
+#footer,
+#header,
+#techRubrics
+{
+	color: #000;
+	background-color: #fff;
+}
+
+/* Тёмно-серый на фоновом */
+#techRubrics a,
+#theme a
+{
+	color: #666;
+	background-color: inherit;
+}
+
+/* Чёрный на телесном: цвет основного текста */
+.column2,
+#advertisment,
+#advertisment a,
+#authorRubrics,
+#authorRubrics a,
+#authorization,
+#authorization a,
+#expertColumn a,
+#inquiry,
+#inquiry a,
+#loginZone,
+#loginZone a,
+#news,
+#news a,
+#olds,
+#olds a,
+#podcasts,
+#podcasts a,
+#sections a
+{
+	color: #282828;
+/*	background-color: #fceedf;*/
+	background-color: #fcf5e1;
+}
+
+/* Серый на телесном: цвет вспомогательного текста */
+
+body,
+.column1,
+.columnEmpty,
+#columns34,
+#expertColumn,
+#menu,
+#menu a,
+#photoColumn,
+#photoColumn a,
+#photoReaders a,
+#photoReaders,
+#sections
+{
+	color: #666;
+	background: #fcf5e1 !important;
+}
+
+/* Белый на чёрном: инвертированный цвет */
+.bar,
+.bar a,
+.bar button
+{
+	color: #fff;
+	background-color: #282828;
+}
+
+/* Чёрный на светло-сиреневом */
+#contest,
+#contest a
+{
+	color: #282828;
+	background-color: #ced6eb;
+}
+
+/* Белый на тёмно-сирененвом */
+#comments h1,
+#contest h1,
+#inquiry button,
+#inquiry h1,
+#news h1,
+#podcasts h1
+{
+	color: #fff;
+	background-color: #828dac;
+}
+
+/* Чёрный на светлом хаки  */
+#blogs,
+#blogs a,
+#peopleNews,
+#peopleNews a,
+#webcameras,
+#webcameras a
+{
+	color: #282828;
+	background-color: #dfdfbe;
+}
+
+/* Белый на тёмном хаки */
+#blogs h1,
+#peopleNews h1
+{
+	color: #fff;
+	background-color: #90978b;
+}
+
+/* Белый на сером */
+#olds h1,
+#photoColumn h1,
+#photoReaders h1,
+#sections h1
+{
+	color: #fff;
+	background-color: #666;
+}
+
+/* Чёрный на розовом светлофиолетовом */
+#comments,
+#comments a
+{
+	color: #282828;
+/*	background-color: #f2ddd6;	*/
+	background-color: #ebe1f2;
+}
+
+/* Чёрный на светло-коричевом */
+#anecdotes,
+#anecdotes a
+{
+	color: #282828;
+	background-color: #ddcfc4;
+}
+
+/* Белый на тёмно-коричневом */
+#anecdotes h1
+{
+	color: #fff;
+	background-color: #8c877b;
+}
+
+/* Белый на красном */
+.rubric h1 a.theme,
+#authorization button,
+#authorization h1,
+#expertColumn h1,
+#theme .service,
+#content h1
+{
+	color: #fff;
+	background-color: #ab3e24;
+}
+
+/* Белый на ярко-красном */
+.error
+{
+	color: #fff;
+	background-color: #f00;
+}
+
+/* Красный на фоновом */
+caption,
+.blogTime,
+#advertisment p.title a,
+.rubric a,
+.rubric h1,
+#theme a,
+#theme h1,
+#theme h2,
+#content a,
+#content h2,
+#ya
+{
+	color: #ab3e24;
+	background-color: inherit;
+}
+
+/* Белый на зелёном */
+
+#authorRubrics h1,
+#webcameras h1
+{
+	color: #fff;
+	background-color: #86965c;
+}
+
+/* Зелёный на фоновом */
+
+.searchUrl,
+#advertisment p.url
+{
+	color: #8c877b;
+	background-color: inherit;
+}
