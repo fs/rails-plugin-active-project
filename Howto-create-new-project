@@ -1,0 +1,63 @@
+= Howto create new project
+
+
+== Create rails skeleton
+
+1. You should use fresh rails edge code for generating:
+    svn co http://dev.rubyonrails.com/svn/rails/trunk rails-edge
+
+2. Genarete new project:
+    ruby ./rails-edge/railties/bin/rails new-project-name
+
+
+== Configure git repository
+
+1. Initialize git
+    git init
+
+2. Create a .gitignore file, containing the following lines:
+    doc/app
+    doc/api
+    log
+    tmp/*
+    db/*.sqlite3
+    db/schema.rb
+    public/system
+
+
+== Add rails edge using braid
+
+    braid add http://dev.rubyonrails.com/svn/rails/trunk vendor/rails
+    git merge braid/track
+
+
+== Add required plugins using braid
+
+    braid add --type svn -p http://rspec.rubyforge.org/svn/trunk/rspec
+    braid add --type svn -p http://rspec.rubyforge.org/svn/trunk/rspec_on_rails
+    braid add --type svn http://rspec-on-rails-matchers.googlecode.com/svn/trunk vendor/plugins/rspec_on_rails_matchers
+    braid add --type svn -p http://svn.viney.net.nz/things/rails/plugins/active_record_defaults
+    braid add --type svn -p http://elitists.textdriven.com/svn/plugins/acts_as_state_machine/trunk
+    braid add --type svn -p http://repo.pragprog.com/svn/Public/plugins/annotate_models
+    braid add --type git git://git.toa/rails-plugin-active-project.git vendor/plugins/active_project
+
+    git merge braid/track
+
+
+== Freeze gems
+
+    gemsonrails
+    rake gems:freeze GEM=tzinfo
+
+== Generate default structure
+
+    script/generate default_project
+
+== Share git repo
+
+1. Create new git repository on the git.toa, configure gitosis configs
+
+2. Add origin branch:
+    git add remote origin git@git.toa:prj-new-project-name.git
+
+
