@@ -77,6 +77,7 @@ class DefaultProjectGenerator < Rails::Generator::Base
 				public/images/admin
                 public/images/textile_editor            
 				public/stylesheets/admin
+				public/stylesheets/admin/blueprint
 			).each do |d|
 				m.directory d
 			end
@@ -187,6 +188,9 @@ class DefaultProjectGenerator < Rails::Generator::Base
 			## public stylesheets            
 			%w(textile_editor).each do |f|
 				m.file "public/stylesheets/#{f}.css", "public/stylesheets/#{f}.css"
+			end	
+            %w(login menu tab).each do |f|
+				m.file "public/stylesheets/admin/#{f}.css", "public/stylesheets/admin/#{f}.css"
 			end
 			%w(forms.css  grid.css  grid.png  ie.css  print.css  reset.css  typography.css).each do |f|
 				m.file "public/stylesheets/admin/blueprint/#{f}", "public/stylesheets/admin/blueprint/#{f}"
