@@ -1,0 +1,14 @@
+diff --git a/vendor/plugins/resource_fu/lib/proto_cool/resource_fu/default_template_path.rb b/vendor/plugins/resource_fu/lib/proto_cool/resource_fu/default_template_path.rb
+index 0d9d3c1..936e251 100644
+--- a/vendor/plugins/resource_fu/lib/proto_cool/resource_fu/default_template_path.rb
++++ b/vendor/plugins/resource_fu/lib/proto_cool/resource_fu/default_template_path.rb
+@@ -7,7 +7,8 @@ module ProtoCool::ResourceFu::DefaultTemplatePath
+       unless base.respond_to?(:default_template_path)
+         base.extend ClassMethods
+         base.send :include, InstanceMethods
+-        ActionView::Partials.send :include, PartialMethods
++        # Disable this, edge does not support this methods any more
++        # ActionView::Partials.send :include, PartialMethods
+       end
+     end
+   end
