@@ -5,7 +5,7 @@
         
       <% for attribute in attributes %>
       <div>
-          <label for="<%= "#{singular_name}_#{attribute.name}" %>"><%= attribute.column.human_name %> <span class="required">*</span>:</label><br />
+          <label for="<%= "#{singular_name}_#{attribute.name}" %>"><%= attribute.column.human_name %> <span class="required">*</span>:</label>
           <% if attribute.field_type == :text_filed %>        
           <br /><%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :size => <%= attribute.column.inspect || 255 %> %>
           <% elsif attribute.field_type == :check_box %>
