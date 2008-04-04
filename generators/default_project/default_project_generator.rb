@@ -189,10 +189,10 @@ class DefaultProjectGenerator < Rails::Generator::Base
 			%w(textile_editor).each do |f|
 				m.file "public/stylesheets/#{f}.css", "public/stylesheets/#{f}.css"
 			end	
-            %w(login menu tab).each do |f|
+            %w(login menu tab pagination).each do |f|
 				m.file "public/stylesheets/admin/#{f}.css", "public/stylesheets/admin/#{f}.css"
 			end
-			%w(forms.css  grid.css  grid.png  ie.css  print.css  reset.css  typography.css pagination.css).each do |f|
+			%w(forms.css  grid.css  grid.png  ie.css  print.css  reset.css  typography.css).each do |f|
 				m.file "public/stylesheets/admin/blueprint/#{f}", "public/stylesheets/admin/blueprint/#{f}"
 			end
 			## end stylesheets
