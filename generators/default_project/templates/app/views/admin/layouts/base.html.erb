@@ -12,6 +12,7 @@
         <%= javascript_include_tag :defaults, :cache => true %>
         <%= javascript_include_tag "control_tabs" %>
         <%= yield :head %>
+        <%= javascript_tag(yield(:head_javascript)) if yield(:head_javascript) %>
     </head>
     <body>
         <div id="header">
