@@ -59,7 +59,6 @@ class AdminRspecScaffoldGenerator < Rails::Generator::NamedBase
       
             # Check for class naming collisions.
             m.class_collisions("#{controller_class_name}Controller", "#{controller_class_name}Helper")
-            m.class_collisions("#{class_name}")
 
             # Controller, helper, views, and spec directories.
             m.directory(File.join('app/controllers', controller_class_path))
