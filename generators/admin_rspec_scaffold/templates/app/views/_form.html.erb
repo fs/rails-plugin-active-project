@@ -7,9 +7,11 @@
       <div>
           <label for="<%= attribute.name %>"><%= attribute.column.human_name %> <span class="required">*</span>:</label><br />
           <% if attribute.field_type == :text_filed %>        
-          <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :size => <%= attribute.column.inspect || 255 %> %>
+          <br /><%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :size => <%= attribute.column.inspect || 255 %> %>
+          <% elsif attribute.field_type == :check_box %>
+          <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :class => 'clean' %>          
           <% else %>
-          <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+          <br /><%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
           <% end %>
           <div class="field-tip"><%= attribute.column.human_name %> tip</div>
       </div>
