@@ -1,0 +1,19 @@
+== Howto deploy project from tsweb.toa to the slicehost vps
+
+1. Push all changes to the git
+git push
+
+2. Became admin on the tssweb.toa
+sudo su admin -
+
+3. Go to project source
+cd ~/projects/prj-sample-project-name
+
+4. Pull new changes and examine
+git pull
+
+5. Push changes to the remote repo
+git push fs
+
+6. Update project using vlad. Without ENV variable stage version will be updated
+rake task vlad:update vlad:migrate vlad:start_app ENV=production
