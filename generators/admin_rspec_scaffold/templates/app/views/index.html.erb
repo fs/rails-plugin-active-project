@@ -30,6 +30,8 @@
     </tbody>
 </table>
 
+<%%= will_paginate @<%=plural_name %> %>
+
 <%% else %>
 
     <h3>So far no <%= plural_name.humanize %> were created. <%%= link_to 'Create new?', :action => :new %></h3>

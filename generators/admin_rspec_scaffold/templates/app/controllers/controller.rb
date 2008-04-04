@@ -2,7 +2,7 @@ class <%= controller_class_name %>Controller < <%= admin_class_name %>::BaseCont
     # GET /<%= admin_namespace_path %>/<%= plural_name %>
     # GET /<%= admin_namespace_path %>/<%= plural_name %>.xml
     def index
-        @<%= plural_name %> = <%= class_name %>.find(:all)
+        @<%= plural_name %> = <%= class_name %>.paginate(:page => params[:page], :per_page => APP_CONFIG['per_page'])
 
         respond_to do |format|
             format.html # index.html.erb

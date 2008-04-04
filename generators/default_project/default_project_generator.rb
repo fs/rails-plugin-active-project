@@ -192,7 +192,7 @@ class DefaultProjectGenerator < Rails::Generator::Base
             %w(login menu tab).each do |f|
 				m.file "public/stylesheets/admin/#{f}.css", "public/stylesheets/admin/#{f}.css"
 			end
-			%w(forms.css  grid.css  grid.png  ie.css  print.css  reset.css  typography.css).each do |f|
+			%w(forms.css  grid.css  grid.png  ie.css  print.css  reset.css  typography.css pagination.css).each do |f|
 				m.file "public/stylesheets/admin/blueprint/#{f}", "public/stylesheets/admin/blueprint/#{f}"
 			end
 			## end stylesheets
