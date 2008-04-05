@@ -33,7 +33,7 @@ class <%= controller_class_name %>Controller < <%= admin_class_name %>::BaseCont
 
         respond_to do |format|
             if @<%= singular_name %>.save
-                flash[:notice] = '&quot;<%= plural_name.humanize %>&quot; was successfully created.'
+                flash[:notice] = '&quot;<%= singular_name.humanize %>&quot; was successfully created.'
                 format.html { redirect_to(<%= admin_namespace_path %>_<%= plural_name %>_url) }
                 format.xml  { render :xml => @<%= singular_name %>, :status => :created, :location => @<%= singular_name %> }
             else
@@ -50,7 +50,7 @@ class <%= controller_class_name %>Controller < <%= admin_class_name %>::BaseCont
 
         respond_to do |format|
             if @<%= singular_name %>.update_attributes(params[:<%= singular_name %>])
-                flash[:notice] = '&quot;<%= plural_name.humanize %>&quot; was successfully updated.'
+                flash[:notice] = '&quot;<%= singular_name.humanize %>&quot; was successfully updated.'
                 format.html { redirect_to(<%= admin_namespace_path %>_<%= plural_name %>_url) }
                 format.xml  { head :ok }
             else
