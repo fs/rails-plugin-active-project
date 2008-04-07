@@ -40,6 +40,7 @@
     braid add --type svn -p http://elitists.textdriven.com/svn/plugins/acts_as_state_machine/trunk
     braid add --type svn -p http://repo.pragprog.com/svn/Public/plugins/annotate_models
     braid add --type git git://git.toa/rails-plugin-active-project.git vendor/plugins/active_project
+    braid add --type git -p git://github.com/mislav/will_paginate.git
 
     git merge braid/track
 
