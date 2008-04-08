@@ -45,11 +45,6 @@
     git merge braid/track
 
 
-== Freeze gems
-
-    gemsonrails
-    rake gems:freeze GEM=tzinfo
-
 == Generate default structure
 
     script/generate default_project
@@ -60,5 +55,7 @@
 
 2. Add origin branch:
     git add remote origin git@git.toa:prj-new-project-name.git
+    git config branch.master.remote origin
+    git config branch.master.merge refs/heads/master
 
 
