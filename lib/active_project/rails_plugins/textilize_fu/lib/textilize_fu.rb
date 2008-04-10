@@ -10,8 +10,7 @@ module TextilizeFu
     def self.included(base)
         base.extend ClassMethods 
         class << base
-            attr_accessor :textilize_attribute
-            attr_accessor :html_field
+            attr_accessor :textilize_attributes
         end
     end
   
@@ -21,22 +20,25 @@ module TextilizeFu
         #   class Foo < ActiveRecord::Base
         #     # stores the html version of body in body_html
         #     textilize :body
-        #   
-        #     # stores html version of textile_body into converted_body
-        #     textilize :textile_body, :converted_body
-        #
         #   end
         #
-        def textilize(attr_name, html_field_name = nil)
-            self.textilize_attribute  = attr_name
-            self.html_field           = html_field_name || "#{attr_name.to_s}_html".to_sym
+        def textilize(*attrs)
+            self.textilize_attributes  = attrs
+            
             before_save :create_textilized_field
         end
     end
   
     protected
+    
+    def textilized_field_name(attr)
+        "#{attr}_html"
+    end
+    
     def create_textilized_field
-        send("#{self.class.html_field}=", TextilizeFu.translate(send(self.class.textilize_attribute))) unless send(self.class.textilize_attribute).nil?
+        self.class.textilize_attributes.each do |attr|
+            send("#{textilized_field_name(attr)}=", TextilizeFu.translate(send(attr))) unless send(attr).nil?
+        end
     end
 
 end
