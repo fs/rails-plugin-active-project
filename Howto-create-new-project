@@ -33,9 +33,9 @@
 
 == Add required plugins using braid
 
-    braid add --type svn -p http://rspec.rubyforge.org/svn/trunk/rspec
-    braid add --type svn -p http://rspec.rubyforge.org/svn/trunk/rspec_on_rails
-    braid add --type svn http://rspec-on-rails-matchers.googlecode.com/svn/trunk vendor/plugins/rspec_on_rails_matchers
+    braid add --type git -p git://github.com/dchelimsky/rspec.git
+    braid add --type git -p git://github.com/dchelimsky/rspec-rails.git
+    braid add --type git -p git://github.com/joshknowles/rspec-on-rails-matchers.git
     braid add --type svn -p http://svn.viney.net.nz/things/rails/plugins/active_record_defaults
     braid add --type svn -p http://elitists.textdriven.com/svn/plugins/acts_as_state_machine/trunk
     braid add --type svn -p http://repo.pragprog.com/svn/Public/plugins/annotate_models
@@ -54,8 +54,6 @@
 1. Create new git repository on the git.toa, configure gitosis configs
 
 2. Add origin branch:
-    git add remote origin git@git.toa:prj-new-project-name.git
-    git config branch.master.remote origin
-    git config branch.master.merge refs/heads/master
+	rake git:add_origin PROJECT=new-project-name
 
 
