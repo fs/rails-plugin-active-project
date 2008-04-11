@@ -7,7 +7,7 @@
     svn co http://dev.rubyonrails.com/svn/rails/trunk rails-edge
 
 2. Genarete new project:
-    ruby ./rails-edge/railties/bin/rails new-project-name
+    ruby /home/admin/projects/rails-edge/railties/bin/rails test_rails new-project-name
 
 
 == Configure git repository
