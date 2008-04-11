@@ -20,9 +20,9 @@ module ActiveProject #:nodoc:
 
                 module ClassMethods # :nodoc:
 
-                    def freeze_time(frozen_time = 946702800)
+                    def freeze_time(frozen_time = ::Time.now.to_i)
                         self.instance_eval do
-                            frozen_now = (frozen_time)
+                            frozen_now = frozen_time
 
                             alias :original_now :now
                             alias :now :frozen_now
