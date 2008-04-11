@@ -27,7 +27,7 @@
 
 == Add rails edge using braid
 
-    braid add http://dev.rubyonrails.com/svn/rails/trunk vendor/rails
+    braid add --type git git://github.com/rails/rails.git vendor/rails
     git merge braid/track
 
 
