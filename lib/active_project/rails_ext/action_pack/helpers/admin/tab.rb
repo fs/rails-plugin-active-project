@@ -53,7 +53,7 @@ module ActiveProject #:nodoc:
                             def puts_js
                                 @context.content_for :head_javascript do
                                     <<-JS
-                                    Event.observe(window, 'load', function() {
+                                    document.observe('contentloaded', function() {
                                         new Control.Tabs('#{@tab_id}');
                                     });
                                     JS
