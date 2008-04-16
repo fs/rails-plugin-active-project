@@ -24,7 +24,7 @@ module ActiveProject #:nodoc:
                             
                             @template.content_for :head_javascript do
                                 <<-JS
-                                document.observe('contentloaded', function() {
+                                Event.observe(window, 'load', function() {
                                     TextileEditor.initialize('#{tag_id}', 'extended');
                                 });
                                 JS
