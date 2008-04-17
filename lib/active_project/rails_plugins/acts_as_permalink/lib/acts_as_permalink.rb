@@ -13,6 +13,10 @@ module Flatsoft
 
                 def self.included(base) # :nodoc:
                     base.extend ClassMethods
+
+	                class << base
+        	            attr_accessor :permalink_options
+    	            end
                 end
             
                 module ClassMethods
@@ -29,14 +33,15 @@ module Flatsoft
                             define_method(:to_param) do
                                 send(options[:to])
                             end
-                            
-                            (class << self; self; end).class_eval do
-								define_method("find_by_param") do
-									send("find_by_#{options[:to]}") || raise(ActiveRecord::RecordNotFound)
-								end
-                            end
                         end
+
+						self.permalink_options = options
                     end                
+
+					def find_by_param(param, *args)
+						send("find_by_#{self.permalink_options[:to]}", param, *args) || raise(ActiveRecord::RecordNotFound)
+					end
+
                 end
             
                 module ActsMethods
