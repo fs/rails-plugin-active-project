@@ -31,9 +31,9 @@ module Flatsoft
                             end
                             
                             (class << self; self; end).class_eval do
-                                define_method("find_by_#{options[:to]}") do
-                                    super || raise(ActiveRecord::RecordNotFound)
-                                end
+								define_method("find_by_param") do
+									send("find_by_#{options[:to]}") || raise(ActiveRecord::RecordNotFound)
+								end
                             end
                         end
                     end                
