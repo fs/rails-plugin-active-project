@@ -7,7 +7,7 @@ module ActiveProject #:nodoc:
                         def menu_top(menu = 'admin')
                             ::Menu.new(menu).show do |item|
                                 restrict_to(item.roles) do
-                                    if active_top_menu == item.key
+                                    if controller_name == item.key.to_s
                                         content_tag('li', link_to(item.title, item.url), :class => 'here')
                                     else
                                         content_tag('li', link_to(item.title, item.url))
