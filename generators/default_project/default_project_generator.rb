@@ -139,7 +139,7 @@ class DefaultProjectGenerator < Rails::Generator::Base
             
 			## yml config
 			m.file "db/yml/menu/admin.yml", "db/yml/menu/admin.yml"
-			m.template "db/yml/config/app.yml", "db/yml/config/app.yml", :assigns => { :app_name => @app_name }
+			m.template "config/app.yml", "config/app.yml", :assigns => { :app_name => @app_name }
 			## yml
             
             
